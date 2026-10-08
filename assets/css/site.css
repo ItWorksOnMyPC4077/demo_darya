@@ -228,3 +228,5 @@ body.dark{--navy:#1e1e24;--navy2:#2b2d42;--gold:#d4af37;--orange:#d4af37;--paper
 /* Practice Buddy stays in English in both site languages. */
 .chat-widget,.chat-panel{direction:ltr}
 .chat-header,.chat-messages,.quick-replies,.chat-form{text-align:left}
+
+.creator-credit{font-size:11px;color:var(--muted,#65708c);letter-spacing:.02em}.creator-credit strong{color:var(--orange,#f4773d);font-weight:800}@media(max-width:800px){.creator-credit{width:100%;text-align:center;margin-top:8px}}

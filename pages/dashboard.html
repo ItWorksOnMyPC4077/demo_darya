@@ -8,6 +8,9 @@
   <title>داشبورد آموزشی | داریا</title>
     <link rel="stylesheet" href="../assets/css/site.css">
   <script defer src="../assets/js/site.js"></script>
+  <link rel="stylesheet" href="../assets/css/dashboard-enhancements.css">
+  <script defer src="../assets/js/dashboard-enhancements.js"></script>
+  <link rel="stylesheet" href="../assets/css/page-transition.css">
 </head>
 <body class="dashboard-page" data-page="dashboard">
   <div class="noise"></div>
@@ -32,7 +35,7 @@
     <section class="dashboard-welcome" aria-labelledby="welcomeTitle">
       <div>
         <span class="dashboard-kicker"><span class="status-dot"></span> فضای یادگیری شخصی تو</span>
-        <h1 id="welcomeTitle">سلام <span id="studentName">امیرعلی</span>، آماده‌ای ادامه بدهی؟</h1>
+        <h1 id="welcomeTitle">سلام <span id="studentName">Student</span>، آماده‌ای ادامه بدهی؟</h1>
         <p>امروز فقط یک تمرین کوتاه کافی است تا یک قدم به مکالمهٔ روان‌تر نزدیک شوی.</p>
       </div>
       <div class="streak-card" aria-label="رکورد تمرین امروز">
@@ -53,6 +56,16 @@
       </label>
     </div>
 
+    <section class="dashboard-command-center" aria-label="خلاصهٔ امروز">
+      <article class="continue-card"><span class="dashboard-kicker">ادامهٔ مسیر</span><h2>مکالمه در جلسهٔ کاری</h2><p>آخرین درس ذخیره‌شده را ادامه بده و تمرین پاسخ‌گویی را کامل کن.</p><a class="dashboard-primary-button" href="#learning">ادامهٔ درس <span aria-hidden="true">↗</span></a></article>
+      <article class="goal-card"><span class="dashboard-kicker">هدف امروز</span><h3>یک تمرین کوتاه</h3><p>با ۱۵ دقیقه تمرین، زنجیرهٔ یادگیری‌ات را حفظ کن.</p><div class="goal-track" role="progressbar" aria-label="پیشرفت هدف امروز" aria-valuemin="0" aria-valuemax="100"><span data-goal-progress></span></div><div class="goal-meta"><span data-goal-value>۷۲٪</span><button class="dashboard-notification-toggle" data-goal-complete type="button">ثبت تمرین امروز</button></div></article>
+      <div class="weekly-stats" aria-label="خلاصهٔ هفتگی"><div class="weekly-stat"><strong>۷۵</strong><span>دقیقه تمرین</span></div><div class="weekly-stat"><strong>۴</strong><span>روز فعال</span></div><div class="weekly-stat"><strong>۲۸</strong><span>لغت مرورشده</span></div><div class="weekly-stat"><strong>۶۸٪</strong><span>پیشرفت دوره</span></div></div>
+    </section>
+    <section class="dashboard-lower-grid" aria-label="دوره‌ها و اعلان‌ها">
+      <article class="my-courses-panel" id="my-courses"><div class="dashboard-panel-heading"><div><span class="dashboard-kicker">یادگیری من</span><h2>دوره‌های من</h2></div><a href="course-details.html?course=conversation">مشاهده همه ↗</a></div><div class="course-mini-list"><a class="course-mini" href="course-details.html?course=conversation"><span class="course-mini-icon">01</span><span><strong>مکالمه فشرده آیلتس</strong><small>درس ۴ از ۱۲ · ادامهٔ تمرین</small></span><span class="course-mini-progress"><span style="width:68%"></span></span></a><a class="course-mini" href="course-details.html?course=club"><span class="course-mini-icon">02</span><span><strong>انگلیسی بازرگانی</strong><small>۸ جلسه · در انتظار شروع</small></span><span class="course-mini-progress"><span style="width:22%"></span></span></a></div></article>
+      <article class="notifications-panel" id="notificationsPanel" aria-expanded="true"><div class="dashboard-panel-heading"><div><span class="dashboard-kicker">به‌روز بمان</span><h2>اعلان‌ها</h2></div><button class="dashboard-notification-toggle" data-notification-toggle type="button">پنهان کردن اعلان‌ها</button></div><div class="notification-list"><div class="notification"><i class="notification-dot"></i><div><strong>تمرین جدید آماده است</strong><time>امروز · ۱۰ دقیقه پیش</time></div></div><div class="notification"><i class="notification-dot"></i><div><strong>بازخورد مدرس در دسترس است</strong><time>دیروز</time></div></div><div class="notification"><i class="notification-dot"></i><div><strong>سه روز زنجیرهٔ تمرین</strong><time>۲ روز پیش</time></div></div></div></article>
+    </section>
+    <section class="achievements-panel" aria-labelledby="achievementsTitle"><div class="dashboard-panel-heading"><div><span class="dashboard-kicker">انگیزهٔ بیشتر</span><h2 id="achievementsTitle">دستاوردها</h2></div><span class="dashboard-kicker">۱ از ۴ باز شده</span></div><div class="achievement-list"><div class="achievement is-earned"><span class="achievement-icon">✦</span><strong>شروع خوب</strong><small>اولین تمرین</small></div><div class="achievement"><span class="achievement-icon">♧</span><strong>هفت روز مداوم</strong><small>در انتظار تکمیل</small></div><div class="achievement"><span class="achievement-icon">◎</span><strong>صد واژه</strong><small>۷۲٪ پیشرفت</small></div><div class="achievement"><span class="achievement-icon">◉</span><strong>صدای من</strong><small>اولین ضبط</small></div></div></section>
     <section class="placement-banner" id="placementBanner" aria-live="polite">
       <span class="placement-icon" aria-hidden="true">✦</span>
       <p id="placementText">برای دریافت پیشنهاد دقیق‌تر، آزمون تعیین سطح را کامل کن.</p>
@@ -219,5 +232,6 @@
   </aside>
 
   <footer class="dashboard-footer"><a class="brand" href="../index.html"><span class="brand-mark"><img src="../assets/icons/brand.svg" alt="" width="35" height="35"></span><span>داریا<span class="brand-dot">.</span></span></a><span>یادگیری کوچک امروز، مکالمهٔ بزرگ فردا.</span></footer>
+  <script defer src="../assets/js/page-transition.js"></script>
 </body>
 </html>
